@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DAUD'S COLLECTION</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            fadeIn: 'fadeIn 1.5s ease-in-out',
+            bounceIn: 'bounceIn 1s ease',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            bounceIn: {
+              '0%': { transform: 'scale(0.9)', opacity: '0' },
+              '50%': { transform: 'scale(1.05)', opacity: '1' },
+              '100%': { transform: 'scale(1)', opacity: '1' },
+            },
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+  <!-- Mobile Menu Toggle -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 shadow-md">
+    <div class="container mx-auto flex flex-wrap justify-between items-center">
+      <h1 class="text-2xl font-bold animate-fadeIn">MyBusiness</h1>
+      <button class="md:hidden text-white" onclick="toggleMenu()">
+        ☰
+      </button>
+      <nav id="mobileMenu" class="w-full md:w-auto mt-4 md:mt-0 space-y-2 md:space-y-0 md:space-x-4 text-center md:flex hidden animate-fadeIn">
+        <a href="#" class="block md:inline hover:underline">Home</a>
+        <a href="#about" class="block md:inline hover:underline">About</a>
+        <a href="#services" class="block md:inline hover:underline">Services</a>
+        <a href="#contact" class="block md:inline hover:underline">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="text-center py-20 bg-gradient-to-r from-blue-400 to-indigo-600 text-white px-4" data-aos="fade-up">
+    <h2 class="text-4xl md:text-5xl font-bold mb-4">Grow Your Business with Us</h2>
+    <p class="text-lg md:text-xl mb-6">We help you scale through design, strategy, and modern solutions.</p>
+    <a href="#contact" class="inline-block bg-white text-blue-600 font-semibold py-2 px-6 rounded-full shadow hover:bg-gray-100">Get Started</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 px-4 bg-gray-50" data-aos="fade-right">
+    <div class="container mx-auto text-center">
+      <h3 class="text-3xl md:text-4xl font-bold mb-4">Who We Are</h3>
+      <p class="max-w-2xl mx-auto text-base md:text-lg">We are a team of creatives and strategists who help businesses build their online presence through sleek design and effective digital strategy.</p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-16 px-4" data-aos="fade-left">
+    <div class="container mx-auto text-center">
+      <h3 class="text-3xl md:text-4xl font-bold mb-8">Our Services</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div class="bg-white shadow-lg rounded-xl p-6 hover:shadow-xl transition-transform transform hover:scale-105" data-aos="zoom-in">
+          <h4 class="text-xl font-semibold mb-2">Web Design</h4>
+          <p>Modern and responsive websites tailored to your brand.</p>
+        </div>
+        <div class="bg-white shadow-lg rounded-xl p-6 hover:shadow-xl transition-transform transform hover:scale-105" data-aos="zoom-in">
+          <h4 class="text-xl font-semibold mb-2">Marketing Strategy</h4>
+          <p>Data-driven marketing solutions to boost your reach.</p>
+        </div>
+        <div class="bg-white shadow-lg rounded-xl p-6 hover:shadow-xl transition-transform transform hover:scale-105" data-aos="zoom-in">
+          <h4 class="text-xl font-semibold mb-2">SEO Optimization</h4>
+          <p>Improve your rankings and attract more traffic.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="bg-indigo-600 text-white py-12 text-center px-4" data-aos="fade-up">
+    <h4 class="text-2xl md:text-3xl font-bold mb-4">Ready to take your business to the next level?</h4>
+    <a href="#contact" class="inline-block bg-white text-indigo-600 font-semibold py-2 px-6 rounded-full shadow hover:bg-gray-100">Contact Us</a>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact" class="py-16 px-4 bg-gray-100" data-aos="fade-up">
+    <div class="container mx-auto max-w-xl">
+      <h3 class="text-3xl md:text-4xl font-bold text-center mb-8">Contact Us</h3>
+      <form class="space-y-6">
+        <div>
+          <label class="block mb-2 font-semibold">Name</label>
+          <input type="text" placeholder="Your name" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+        </div>
+        <div>
+          <label class="block mb-2 font-semibold">Email</label>
+          <input type="email" placeholder="you@example.com" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+        </div>
+        <div>
+          <label class="block mb-2 font-semibold">Message</label>
+          <textarea rows="4" placeholder="Your message" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500" required></textarea>
+        </div>
+        <button type="submit" class="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8 text-center px-4" data-aos="fade-up">
+    <p>Contact us at <a href="mailto:info@mybusiness.com" class="underline">info@mybusiness.com</a></p>
+    <div class="mt-4 space-x-4">
+      <a href="#" class="hover:underline">Facebook</a>
+      <a href="#" class="hover:underline">Twitter</a>
+      <a href="#" class="hover:underline">LinkedIn</a>
+    </div>
+    <p class="mt-4 text-sm">&copy; 2025 MyBusiness. All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
